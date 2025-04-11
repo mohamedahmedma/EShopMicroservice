@@ -17,7 +17,9 @@ namespace CatalogAPI.Products.CreateProduct
 
         }
     }
-    internal class CreateProductCommandHandler(IDocumentSession session) : ICommandHandler<CreateProductCommand, CreateProductResult>
+    internal class CreateProductCommandHandler
+        (IDocumentSession session ) 
+        : ICommandHandler<CreateProductCommand, CreateProductResult>
     {
         public async Task<CreateProductResult> Handle(CreateProductCommand command, CancellationToken cancellationToken)
         {
@@ -25,6 +27,15 @@ namespace CatalogAPI.Products.CreateProduct
             //create Product entity from command object
             //save to database
             //return CreatedProudctResult result
+
+            //var result = await validator.ValidateAsync(command, cancellationToken);
+            //var errors = result.Errors.Select(x => x.ErrorMessage).ToList();
+            //if (errors.Any())
+            //{
+            //    throw new ValidationException(errors.FirstOrDefault());
+            //}
+
+            //logger.LogInformation("CreatePoductCommandHandler. Handle called with {@Command}", command);
             var product = new Product
             {
                 Name = command.Name,
