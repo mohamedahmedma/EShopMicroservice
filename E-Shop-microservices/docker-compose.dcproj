@@ -4,7 +4,7 @@
     <ProjectVersion>2.1</ProjectVersion>
     <DockerTargetOS>Linux</DockerTargetOS>
     <DockerPublishLocally>False</DockerPublishLocally>
-    <ProjectGuid>315be351-97e6-4416-b883-674b742eabf6</ProjectGuid>
+    <ProjectGuid>000388bb-a51d-4b08-9f07-77576d80f2ab</ProjectGuid>
     <DockerLaunchAction>LaunchBrowser</DockerLaunchAction>
     <DockerServiceUrl>{Scheme}://localhost:{ServicePort}</DockerServiceUrl>
     <DockerServiceName>catalogapi</DockerServiceName>
@@ -16,4 +16,8 @@
     <None Include="docker-compose.yml" />
     <None Include=".dockerignore" />
   </ItemGroup>
+	<PropertyGroup>
+		<DockerComposeProjectPath>$(MSBuildProjectDirectory)\docker-compose.dcproj</DockerComposeProjectPath>
+		<DockerfileRunArguments>--security-opt="label=disable"</DockerfileRunArguments>
+	</PropertyGroup>
 </Project>
