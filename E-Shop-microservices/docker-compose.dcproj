@@ -3,11 +3,14 @@
   <PropertyGroup Label="Globals">
     <ProjectVersion>2.1</ProjectVersion>
     <DockerTargetOS>Linux</DockerTargetOS>
-    <DockerPublishLocally>False</DockerPublishLocally>
-    <ProjectGuid>000388bb-a51d-4b08-9f07-77576d80f2ab</ProjectGuid>
+    <ProjectGuid>your-project-guid-here</ProjectGuid>
     <DockerLaunchAction>LaunchBrowser</DockerLaunchAction>
     <DockerServiceUrl>{Scheme}://localhost:{ServicePort}</DockerServiceUrl>
-    <DockerServiceName>catalogapi</DockerServiceName>
+    <DockerServiceName>catalog.api</DockerServiceName>
+    <!-- Set the absolute path to avoid OneDrive issues -->
+    <DockerComposeProjectPath>C:\DockerProjects\EShopMicroservices\docker-compose.dcproj</DockerComposeProjectPath>
+    <!-- Force Docker to use the symlinked location -->
+    <DockerComposeBaseFilePath>C:\DockerProjects\EShopMicroservices\docker-compose</DockerComposeBaseFilePath>
   </PropertyGroup>
   <ItemGroup>
     <None Include="docker-compose.override.yml">
@@ -15,9 +18,10 @@
     </None>
     <None Include="docker-compose.yml" />
     <None Include=".dockerignore" />
+    <None Include=".env" />
   </ItemGroup>
-	<PropertyGroup>
-		<DockerComposeProjectPath>$(MSBuildProjectDirectory)\docker-compose.dcproj</DockerComposeProjectPath>
-		<DockerfileRunArguments>--security-opt="label=disable"</DockerfileRunArguments>
-	</PropertyGroup>
+  <PropertyGroup>
+    <DockerComposeProjectPath>$(MSBuildProjectDirectory)\docker-compose.dcproj</DockerComposeProjectPath>
+    <DockerfileRunArguments>--security-opt="label=disable"</DockerfileRunArguments>
+  </PropertyGroup>
 </Project>
