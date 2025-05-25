@@ -398,3 +398,4 @@ FodyWeavers.xsd
 
 # JetBrains Rider
 *.sln.iml
+/E-Shop-microservices/src/Services/DockerDesktop/DockerDesktop.vhdx
