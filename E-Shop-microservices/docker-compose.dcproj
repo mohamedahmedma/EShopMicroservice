@@ -3,14 +3,11 @@
   <PropertyGroup Label="Globals">
     <ProjectVersion>2.1</ProjectVersion>
     <DockerTargetOS>Linux</DockerTargetOS>
-    <ProjectGuid>your-project-guid-here</ProjectGuid>
+    <DockerPublishLocally>False</DockerPublishLocally>
+    <ProjectGuid>37507ba8-8998-4823-afc6-32533752f256</ProjectGuid>
     <DockerLaunchAction>LaunchBrowser</DockerLaunchAction>
     <DockerServiceUrl>{Scheme}://localhost:{ServicePort}</DockerServiceUrl>
-    <DockerServiceName>catalog.api</DockerServiceName>
-    <!-- Set the absolute path to avoid OneDrive issues -->
-    <DockerComposeProjectPath>C:\DockerProjects\EShopMicroservices\docker-compose.dcproj</DockerComposeProjectPath>
-    <!-- Force Docker to use the symlinked location -->
-    <DockerComposeBaseFilePath>C:\DockerProjects\EShopMicroservices\docker-compose</DockerComposeBaseFilePath>
+    <DockerServiceName>catalogapi</DockerServiceName>
   </PropertyGroup>
   <ItemGroup>
     <None Include="docker-compose.override.yml">
@@ -18,10 +15,5 @@
     </None>
     <None Include="docker-compose.yml" />
     <None Include=".dockerignore" />
-    <None Include=".env" />
   </ItemGroup>
-  <PropertyGroup>
-    <DockerComposeProjectPath>$(MSBuildProjectDirectory)\docker-compose.dcproj</DockerComposeProjectPath>
-    <DockerfileRunArguments>--security-opt="label=disable"</DockerfileRunArguments>
-  </PropertyGroup>
 </Project>

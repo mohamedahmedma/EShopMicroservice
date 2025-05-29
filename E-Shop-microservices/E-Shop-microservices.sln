@@ -17,11 +17,11 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Basket", "Basket", "{4761B1
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Basket.API", "src\Services\Basket\Basket.API\Basket.API.csproj", "{77B7DF48-0052-4B3C-B992-B0FF332AE57C}"
 EndProject
-Project("{E53339B2-1760-4266-BCC7-CA923CBCF16C}") = "docker-compose", "docker-compose.dcproj", "{000388BB-A51D-4B08-9F07-77576D80F2AB}"
-EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Discount", "Discount", "{6251A770-F033-4285-8C5D-74ECF5A0BABC}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Discount.Grpc", "src\Services\Discount\Discount.Grpc\Discount.Grpc.csproj", "{FB6DBE37-7967-4268-B1DE-4E4C97931F97}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Discount.Grpc", "src\Services\Discount\Discount.Grpc\Discount.Grpc.csproj", "{FB6DBE37-7967-4268-B1DE-4E4C97931F97}"
+EndProject
+Project("{E53339B2-1760-4266-BCC7-CA923CBCF16C}") = "docker-compose", "docker-compose.dcproj", "{37507BA8-8998-4823-AFC6-32533752F256}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -41,14 +41,14 @@ Global
 		{77B7DF48-0052-4B3C-B992-B0FF332AE57C}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{77B7DF48-0052-4B3C-B992-B0FF332AE57C}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{77B7DF48-0052-4B3C-B992-B0FF332AE57C}.Release|Any CPU.Build.0 = Release|Any CPU
-		{000388BB-A51D-4B08-9F07-77576D80F2AB}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{000388BB-A51D-4B08-9F07-77576D80F2AB}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{000388BB-A51D-4B08-9F07-77576D80F2AB}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{000388BB-A51D-4B08-9F07-77576D80F2AB}.Release|Any CPU.Build.0 = Release|Any CPU
 		{FB6DBE37-7967-4268-B1DE-4E4C97931F97}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{FB6DBE37-7967-4268-B1DE-4E4C97931F97}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{FB6DBE37-7967-4268-B1DE-4E4C97931F97}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{FB6DBE37-7967-4268-B1DE-4E4C97931F97}.Release|Any CPU.Build.0 = Release|Any CPU
+		{37507BA8-8998-4823-AFC6-32533752F256}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{37507BA8-8998-4823-AFC6-32533752F256}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{37507BA8-8998-4823-AFC6-32533752F256}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{37507BA8-8998-4823-AFC6-32533752F256}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
