@@ -11,5 +11,7 @@ public class ProductConfiguration : IEntityTypeConfiguration<Product>
             );
         builder.Property(c => c.Name).HasMaxLength(100).IsRequired();
 
+        builder.Property(p => p.Price)
+            .HasPrecision(18, 2);
     }
 }
