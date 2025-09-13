@@ -2,7 +2,7 @@
 
 namespace Ordering.API.Endpoints;
 
-public record GetOrdersResponse(PaginatedResult<OrderDto> orders);
+public record GetOrdersResponse(PaginatedResult<OrderDto> Orders);
 
 public class GetOrders : ICarterModule
 {
@@ -12,7 +12,7 @@ public class GetOrders : ICarterModule
         {
             var result = await sender.Send(new GetOrdersQuery(request));
 
-            var response = request.Adapt<GetOrdersResponse>();
+            var response = result.Adapt<GetOrdersResponse>();
 
             return Results.Ok(response);
         })

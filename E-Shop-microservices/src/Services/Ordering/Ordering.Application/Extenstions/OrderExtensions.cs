@@ -15,5 +15,5 @@ public static class OrderExtensions
             OrderItems: order.OrderItems.Select(oi => new OrderItemDto(oi.OrderId.Value, oi.ProductId.Value, oi.Quantity, oi.Price)).ToList()
         ));
     }
-
 }
+

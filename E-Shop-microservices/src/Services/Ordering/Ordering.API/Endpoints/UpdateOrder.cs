@@ -2,7 +2,7 @@
 
 namespace Ordering.API.Endpoints;
 
-public record UpdateOrderRequest(OrderDto order);
+public record UpdateOrderRequest(OrderDto Order);
 public record UpdateOrderResponse(bool IsSuccess);
 
 public class UpdateOrder : ICarterModule

@@ -1,5 +1,4 @@
-﻿
-namespace Ordering.Application.Orders.Queries.GetOrders;
+﻿namespace Ordering.Application.Orders.Queries.GetOrders;
 
 public class GetOrdersHandler(IApplicationDbContext context)
     : IQueryHandler<GetOrdersQuery, GetOrdersResult>
@@ -13,7 +12,8 @@ public class GetOrdersHandler(IApplicationDbContext context)
 
         var orders = await context.Orders
             .Include(o => o.OrderItems)
-            .AsNoTracking()
+            .OrderBy(o => o.CreatedAt)
+            //.AsNoTracking()
             .Skip(pageSize * pageIndex)
             .Take(pageSize)
             .ToListAsync(cancellationToken);
@@ -23,7 +23,8 @@ public class GetOrdersHandler(IApplicationDbContext context)
                 pageIndex,
                 pageSize,
                 totalCount,
-                orders.ToOrderDtoList()));
-
+                orders.ToOrderDtoList()
+            )
+        );
     }
 }

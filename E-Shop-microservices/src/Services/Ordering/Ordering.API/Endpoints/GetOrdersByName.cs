@@ -3,7 +3,7 @@ using Ordering.Application.Orders.Queries.GetOrdersByName;
 
 namespace Ordering.API.Endpoints;
 
-public record GetOrdersByNameResponse(IEnumerable<OrderDto> orders);
+public record GetOrdersByNameResponse(IEnumerable<OrderDto> Orders);
 public class GetOrdersByName : ICarterModule
 {
     public void AddRoutes(IEndpointRouteBuilder app)
