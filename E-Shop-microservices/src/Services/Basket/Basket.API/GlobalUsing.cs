@@ -16,6 +16,7 @@ global using HealthChecks.UI.Client;
 global using Microsoft.AspNetCore.Diagnostics.HealthChecks;
 global using Discount.Grpc;
 global using Basket.API.Basket.GetBasket;
+global using Basket.API.Dtos;
 
 
 

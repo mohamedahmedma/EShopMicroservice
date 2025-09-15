@@ -1,3 +1,5 @@
+using BuildingBlocks.Messaging.MassTransit;
+
 var builder = WebApplication.CreateBuilder(args);
 
 // Add services to the container.
@@ -43,6 +45,9 @@ builder.Services.AddGrpcClient<DiscountProtoService.DiscountProtoServiceClient>(
 
     return handler;
 });
+
+//Async Communication Services
+builder.Services.AddMessageBroker(builder.Configuration);
 
 //cross-cutting serices
 builder.Services.AddExceptionHandler<CustomExceptionHandler>();
