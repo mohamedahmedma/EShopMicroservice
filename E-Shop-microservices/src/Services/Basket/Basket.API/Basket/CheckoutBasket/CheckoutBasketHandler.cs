@@ -1,4 +1,5 @@
 ﻿
+using BuildingBlocks.Messaging.Dtos;
 using BuildingBlocks.Messaging.Events;
 using MassTransit;
 
@@ -30,7 +31,12 @@ public class CheckoutBasketCommandHandler
         }
 
         var eventMessage = command.BasketCheckoutDto.Adapt<BasketCheckoutEvent>();
-        eventMessage.TotalPrice = basket.TotalPrice;
+
+        eventMessage = eventMessage with
+        {
+            TotalPrice = basket.TotalPrice,
+            Items = basket.Items.Select(i => new BasketItemDto(i.ProductId, i.Quantity, i.Price , i.Color , i.ProductName)).ToList()
+        };
 
         await publishEndpoint.Publish(eventMessage , cancellationToken);
 
