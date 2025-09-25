@@ -8,7 +8,8 @@
         "catalogapi": "StartDebugging",
         "discount.grpc": "StartDebugging",
         "ordering.api": "StartDebugging",
-        "yarpapigatway": "StartDebugging"
+        "yarpapigatway": "StartDebugging",
+        "shopping.web": "StartDebugging"
       }
     }
   }

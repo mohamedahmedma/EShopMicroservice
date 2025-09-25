@@ -1,4 +1,4 @@
-﻿services:
+services:
   catalogdb:
     image: postgres
   basketdb:
@@ -34,6 +34,11 @@
     build:
       context: .
       dockerfile: src/ApiGatways/YarpApiGatway/Dockerfile
+  shopping.web:
+    image: ${DOCKER_REGISTRY-}shoppingweb
+    build:
+      context: .
+      dockerfile: src/WebApps/Shopping.Web/Dockerfile
 
 volumes:
   postgres_catalog:
